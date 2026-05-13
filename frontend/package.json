@@ -1,0 +1,31 @@
+{
+  "name": "maison-samaa-crm",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pages:dev": "wrangler pages dev --local --persist",
+    "pages:deploy": "wrangler pages deploy",
+    "db:migrate": "wrangler d1 execute maison-samaa-db --file=./migrations/0001_schema.sql",
+    "db:seed": "wrangler d1 execute maison-samaa-db --command=\"SELECT COUNT(*) as users FROM users\""
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.0",
+    "recharts": "^2.15.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.7",
+    "wrangler": "^3.107.0"
+  }
+}

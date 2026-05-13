@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ms-black text-gray-100;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ms-border rounded-full;
+  }
+
+  input, textarea, select {
+    @apply outline-none;
+  }
+
+  @keyframes slide-up {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .animate-slide-up {
+    animation: slide-up 0.25s ease-out;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ms-gold text-ms-black font-semibold px-5 py-2.5 rounded-lg
+           hover:bg-ms-gold-light transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-ms-dark border border-ms-border text-gray-200 font-medium px-5 py-2.5 rounded-lg
+           hover:bg-ms-card hover:border-gray-600 transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-900/40 border border-red-800/50 text-red-300 font-medium px-5 py-2.5 rounded-lg
+           hover:bg-red-900/60 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-ms-card border border-ms-border rounded-xl p-6;
+  }
+
+  .input-field {
+    @apply w-full bg-ms-dark border border-ms-border rounded-lg px-4 py-2.5 text-gray-100
+           placeholder:text-ms-muted text-sm
+           focus:border-ms-gold/50 focus:ring-1 focus:ring-ms-gold/30
+           transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-new { @apply bg-blue-900/40 text-blue-300; }
+  .badge-contacted { @apply bg-yellow-900/40 text-yellow-300; }
+  .badge-qualified { @apply bg-green-900/40 text-green-300; }
+  .badge-proposal { @apply bg-purple-900/40 text-purple-300; }
+  .badge-negotiation { @apply bg-orange-900/40 text-orange-300; }
+  .badge-closed { @apply bg-emerald-900/40 text-emerald-300; }
+  .badge-lost { @apply bg-red-900/40 text-red-300; }
+  .badge-available { @apply bg-green-900/40 text-green-300; }
+  .badge-pending { @apply bg-yellow-900/40 text-yellow-300; }
+  .badge-sold { @apply bg-red-900/40 text-red-300; }
+  .badge-rented { @apply bg-blue-900/40 text-blue-300; }
+  .badge-draft { @apply bg-gray-700/40 text-gray-300; }
+  .badge-active { @apply bg-green-900/40 text-green-300; }
+  .badge-sent { @apply bg-blue-900/40 text-blue-300; }
+  .badge-Follow-up { @apply bg-purple-900/40 text-purple-300; }
+  .badge-Closed { @apply bg-emerald-900/40 text-emerald-300; }
+  .badge-New { @apply bg-blue-900/40 text-blue-300; }
+  .badge-Contacted { @apply bg-yellow-900/40 text-yellow-300; }
+  .badge-Available { @apply bg-green-900/40 text-green-300; }
+  .badge-Reserved { @apply bg-orange-900/40 text-orange-300; }
+  .badge-Sold { @apply bg-red-900/40 text-red-300; }
+  .badge-Lead { @apply bg-blue-900/40 text-blue-300; }
+  .badge-Presentation { @apply bg-purple-900/40 text-purple-300; }
+  .badge-Site\ Visit { @apply bg-yellow-900/40 text-yellow-300; }
+  .badge-Reservation { @apply bg-orange-900/40 text-orange-300; }
+  .badge-Contracted { @apply bg-emerald-900/40 text-emerald-300; }
+  .badge-pending { @apply bg-yellow-900/40 text-yellow-300; }
+  .badge-approved { @apply bg-green-900/40 text-green-300; }
+  .badge-rejected { @apply bg-red-900/40 text-red-300; }
+}

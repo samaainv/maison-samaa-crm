@@ -1,0 +1,21 @@
+# Cloudflare Pages deployment config for Maison Samaa CRM
+# Uses Pages Functions for the API + D1 for the database
+
+name = "maison-samaa-crm"
+
+[build]
+command = "cd frontend && npm install && npm run build"
+output = "frontend/dist"
+
+[env.production]
+vars = { JWT_SECRET = "ms-jwt-secret-change-in-prod", META_APP_SECRET = "your-meta-app-secret" }
+
+[[d1_databases]]
+binding = "DB"
+database_name = "maison-samaa-db"
+database_id = "your-d1-database-id"
+
+# Initial deployment steps:
+# 1. Create D1 database: wrangler d1 create maison-samaa-db
+# 2. Run migration: wrangler d1 execute maison-samaa-db --file=migrations/0001_schema.sql
+# 3. Deploy: wrangler pages deploy --production
