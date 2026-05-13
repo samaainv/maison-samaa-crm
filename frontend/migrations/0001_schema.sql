@@ -119,8 +119,8 @@ CREATE TABLE activities (
 
 -- Seed data
 INSERT INTO users (username, email, password_hash, full_name, role) VALUES
-  ('admin', 'admin@maisonsamaa.com', 'f505e7a310f2c42defc64dcfe3ca59c9$e234a1dc0967c3a949865fec1f82019bb539d06b593ac48da58986ffa4c93b1a', 'Vlad Samaa', 'admin'),
-  ('agent1', 'agent@maisonsamaa.com', 'f505e7a310f2c42defc64dcfe3ca59c9$e234a1dc0967c3a949865fec1f82019bb539d06b593ac48da58986ffa4c93b1a', 'Sarah Agent', 'agent');
+  ('admin', 'admin@maisonsamaa.com', 'b202eced91a041d9b4fb6c0e57d58703$24127860df756c07d15c931abff2501730885b896c609e38a387c62effb45cd8', 'Vlad Samaa', 'admin'),
+  ('agent1', 'agent@maisonsamaa.com', 'b202eced91a041d9b4fb6c0e57d58703$24127860df756c07d15c931abff2501730885b896c609e38a387c62effb45cd8', 'Sarah Agent', 'agent');
 
 INSERT INTO leads (name, phone, email, source, project_interest, status, assigned_to) VALUES
   ('Omar Hassan', '+971501234567', 'omar@example.com', 'Instagram', 'Origami', 'New', 1),

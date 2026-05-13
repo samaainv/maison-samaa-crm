@@ -9,11 +9,11 @@ vars = { JWT_SECRET = "ms-jwt-secret-change-in-prod", META_APP_SECRET = "your-me
 [[env.production.d1_databases]]
 binding = "DB"
 database_name = "maison-samaa-db"
-database_id = "your-d1-database-id"
+database_id = "ec5184f7-399c-4c37-9b82-d2add8b4f4a6"
 
 [env.preview]
 vars = { JWT_SECRET = "ms-jwt-secret-dev", META_APP_SECRET = "dev-secret" }
 [[env.preview.d1_databases]]
 binding = "DB"
 database_name = "maison-samaa-db"
-database_id = "your-d1-database-id"
+database_id = "ec5184f7-399c-4c37-9b82-d2add8b4f4a6"
